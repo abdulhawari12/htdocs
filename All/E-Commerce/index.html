@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>E Commerce</title>
+    <meta name="theme-color" content="#0099ff"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form action="" method="post">
+      <div class="title">
+        <h3>Masuk</h3>
+      </div>
+      <div class="input">
+        <p class="bi bi-person-fill">
+        <img src="icons/ic_account.png"/>
+        </p>
+        <input type="text" name="username" class="input-text" placeholder="   " autocomplete="off" id="user"/>
+        <label for="user" class="label1">Masukkan nama ID</label>
+      </div>
+      <div class="input">
+        <p class="bi bi-lock">
+        <img src="icons/ic_lock_outline.png"/>
+        </p>
+        <input type="password" name="password" class="input-pass" placeholder="   " id="pass"/>
+        <label for="pass" class="label2">Masukkan password</label>
+        <span onclick="toggle()"><img src="icons/ic_eye.png"/></span>
+      </div>
+      <div class="remember">
+      <input type="checkbox" name="remember" id="remember"/>
+      <label for="remember">Remember!</label>
+      </div>
+      <button type="submit" name="submit">Masuk</button>
+      <a href="#">
+        <span>Tidak punya akun?</span>
+      </a>
+    </form>
+  <script src="js/script.js"></script>
+  </body>
+</html>

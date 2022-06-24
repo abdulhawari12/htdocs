@@ -1,0 +1,342 @@
+@font-face
+{
+  src: url('../fonts/bebasneue.ttf');
+  font-family: 'bebasneue';
+}
+@font-face
+{
+  src: url('../fonts/evogria.otf') format('otf');
+  font-family: 'evogria';
+}
+*,html,body
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+:root
+{
+  --color-primary: #0099ff;
+  --color-secondary: #0055ff;
+  --color-white: #ffffff;
+  --color-black: #11101d;
+}
+body 
+{
+  padding-top: 90px;
+}
+.navigation
+{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--color-primary);
+}
+.navigation h3 
+{
+  color: white;
+  font-size: 18px;
+  font-family: evogria;
+}
+
+  .table 
+  {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table td, .table th 
+  {
+    padding: 12px 15px;
+    font-family: evogria;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+  }
+  .table th 
+  {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+  .table tbody tr:nth-child(even)
+  {
+    background: #f5f5f5;
+  }
+  .total 
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 30px 0px;
+  padding: 20px;
+}
+.total h3 
+{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: evogria;
+}
+.total input 
+{
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  margin-left: 30px;
+  padding: 20px;
+  font-size: 16px;
+  font-family: evogria;
+}
+.banner
+{
+  padding: 20px;
+}
+.banner h3 
+{
+  font-size: 20px;
+  font-family: evogria;
+}
+  .toggle
+  {
+    display: none;
+  }
+  .navigation h3 
+  {
+    font-size: 20px;
+  }
+  .menuitems
+  {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+  }
+  .menuitems ul 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menuitems ul li 
+  {
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .menuitems ul li.actived 
+  {
+    border-bottom: 3px solid var(--color-white);
+  }
+  .menuitems ul li a 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-family: evogria;
+    text-decoration: none;
+  }
+  .input label 
+  {
+    display: none;
+  }
+/* Responsive for mobile only */
+@media only screen and (max-width: 600px){
+.toggle 
+{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.toggle span 
+{
+  width: 15px;
+  height: 5px;
+  background: var(--color-white);
+  position: absolute;
+  border-radius: 100px;
+  transition: all 0.3s;
+  left: 0;
+}
+.toggle span:nth-child(1)
+{
+  width: 30px;
+  transform: translateY(-10px);
+  left: 0;
+}
+.toggle span:nth-child(2)
+{
+  width: 20px;
+  transform: translateY(10px);
+  left: 0;
+}
+.toggle.active span:nth-child(1)
+{
+  transform: translateY(0px) rotate(45deg);
+  width: 30px;
+}
+.toggle.active span:nth-child(2)
+{
+  transform: translateY(0px) rotate(-220deg);
+  width: 30px;
+}
+.toggle.active span:nth-child(3)
+{
+  transform: translateX(-500px);
+}
+.menuitems.active
+{
+  left: 0;
+}
+.menuitems 
+{
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: -600px;
+  background: var(--color-primary);
+  transition: all 0.3s;
+  z-index: 1000;
+  display: block;
+}
+.menuitems ul 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menuitems ul li 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+.menuitems ul li.actived
+{
+  border-bottom: 3px solid var(--color-white);
+}
+.menuitems ul li a 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 16px;
+  font-family: evogria;
+  text-decoration: none;
+}
+.banner
+{
+  padding: 20px;
+}
+.banner h3 
+{
+  font-size: 18px;
+  font-family: evogria;
+}
+.table thead
+{
+  display: none;
+}
+.table, .table tbody,.table tr, .table td 
+{
+  width: 100%;
+  display: block;
+}
+.table tr 
+{
+  margin-bottom: 20px;
+}
+.table td 
+{
+  text-align: right;
+  padding-left: 50%;
+  position: relative;
+}
+.table td::before
+{
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  width: 50%;
+  padding-left: 15px;
+  font-size: 15px;
+  font-family: evogria;
+  font-weight: bold;
+  text-align: left;
+}
+.total
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  position: relative;
+}
+.total h3 
+{
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+.total input
+{
+  width: 250px;
+  height: 40px;
+}
+.input label 
+{
+  font-size: 16px;
+  font-family: evogria;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+.total .input 
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+}
+/* end */

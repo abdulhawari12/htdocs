@@ -1,0 +1,226 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root
+{
+  /*--black-primary: rgba(0,53,102,1);
+  --black-secondary: rgba(0,29,61,1);
+  --black: rgba(0,8,20,1);
+  --yellow-primary: rgba(255,214,10,1);
+  --yellow-secondary: rgba(255,195,0,1);
+  --white: rgba(255,255,255,1);*/
+    /* dark mode */
+  --white-smoke: #D6D6D6;
+  /* primary = terang */
+  --yellow-primary: #FFEE32;
+  /* secondary = gelap*/
+  --yellow-secondary: #FFD100;
+  --black-secondary: #202020;
+  --black-primary: #333533;
+  /* end*/
+  --white: #fff;
+  
+  /* light mode*/
+  --blue-primary: rgba(76, 201, 240,0.05);
+  --blue-secondary: #4361EE;
+  --blue-dark: #3A0CA3;
+  --pink-primary: #7209B7;
+  --pink-secondary: #F72585;
+  /* end*/
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue-primary);
+  width: 100%;
+  height: 100vh;
+}
+a 
+{
+  text-decoration: none;
+}
+form
+{
+  width: 90%;
+  background: var(--white);
+  height: 500px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  color: rgba(0,29,61,1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+form .title 
+{
+  width: 100%;
+  height: 60px;
+  background: var(--blue-secondary);
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+form .title h3
+{
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+}
+form .input
+{
+  width: 90%;
+  height: 50px;
+  background: var(--white);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+form .input span
+{
+  background: transparent;
+  transform: translateX(-50px);
+  z-index: 5;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  height: 30px;
+  right: 0;
+}
+form .input span img 
+{
+  width: 30px;
+  height: 30px;
+}
+form .input .bi-lock,.bi-person-fill
+{
+  background: var(--blue-secondary);
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;: ;
+  border-bottom-left-radius: 10px;
+}
+form .input .bi-lock img, .bi-person-fill img
+{
+  width: 30px;
+  height: 30px;
+}
+form .input input
+{
+  width: 90%;
+  height: 50px;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue-secondary);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.input-text:focus ~ .label1,
+.input-text:not(:placeholder-shown).input-text:not(:focus)~.label1
+{
+  transform: translateY(-45px) translateX(45px);
+  background: var(--blue-secondary);
+  color: var(--white);
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.input-pass:focus ~ .label2,
+.input-pass:not(:placeholder-shown).input-pass:not(:focus)~.label2
+{
+  transform: translateY(-45px) translateX(45px);
+  background: var(--blue-secondary);
+  color: var(--white);
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+form .input label
+{
+  position: absolute;
+  color: var(--blue-secondary);
+  transform: translateX(55px);
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+form .remember
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  transform: translateX(-95px);
+}
+form .remember label
+{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue-secondary);
+}
+form button
+{
+  width: 70%;
+  height: 50px;
+  padding: 10px;
+  background: var(--blue-secondary);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 20px;
+}
+form a 
+{
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: var(--blue-secondary);
+}
+form a span 
+{
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--white);
+}

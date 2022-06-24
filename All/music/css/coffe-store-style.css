@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@700&family=Oswald:wght@700&family=Ubuntu:wght@500&display=swap');
+*{
+				padding: 0;
+				margin: 0 auto;
+				box-sizing: border-box;
+}
+body{
+				position: relative;
+				width: 100%;
+				height: 100vh;
+				-webkit-tap-highlight-color: transparent;
+}
+.sidebar{
+      top: 0;
+      left: 0;
+				position: fixed;
+				height: 100%;
+				width: 78px;
+				background: #11101d;
+				padding: 6px 14px;
+				transition: all 0.5s ease;
+				z-index: 99;
+}
+.sidebar.active{
+				width: 240px;
+}
+.sidebar .logo_content .logo{
+				display: flex;
+				color: #fff;
+				height: 50px;
+				width: 100%;
+				align-items: center;
+				opacity: 0;
+				transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo{
+				opacity: 1;
+}
+.logo_content .logo i{
+		position: absolute;
+		left: 20px;
+		font-size: 20px;
+}
+.logo_content .logo .logo_name{
+				font-size: 18px;
+				font-weight: 700;
+}
+.sidebar #btn{
+				position: absolute;
+				left: 40%;
+				top: 6px;
+				color: #fff;
+				font-size: 28px;
+				transform: translateX(0%);
+				width: 50px;
+				height: 50px;
+				transition: all 0.5s ease;
+				line-height: 50px;
+}
+.sidebar.active #btn{
+				left: 95%;
+				transform: translateX(-50%);
+}
+.sidebar ul{
+				margin-top: 20px;
+}
+.sidebar ul li{
+				list-style: none;
+				height: 50px;
+				width: 100%;
+				position: relative;
+				margin: 0 5px;
+				line-height: 50px;
+}
+.sidebar ul li .tooltip{
+				position: absolute;
+				transform: translateY(-50%);
+				top: 0;
+				left: 40px;
+				font-family: "Murecho";
+				border-radius: 6px;
+				background: #fff;
+				color: #333;
+				height: 50px;
+				width: 122px;
+				line-height: 50px;
+				text-align: center;
+				opacity: 0;
+				transition: 0s;
+					box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+.sidebar ul li:hover .tooltip{
+				transition: all 0.5s ease;
+				top: 55%;
+				opacity: 1;
+				transform: translateY(-50%);
+}
+.sidebar.active ul li .tooltip{
+				left: 122px;
+
+}
+.sidebar ul li input{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				outline: none;
+				border: none;
+				background: #1d1b31;
+				border-radius: 12px;
+				padding-left: 50px;
+				color: #fff;
+				font-weight: 500;
+				transition: all 0.5s ease;
+				font-family: "Murecho";
+				
+}
+.sidebar ul li input:hover{
+				border: 3px solid #fff;
+}
+.sidebar ul li .bi-search{
+				z-index: 99;
+				position: absolute;
+				color: #fff;
+				font-size: 22px;
+				transition: all 0.5s ease;
+}
+.sidebar ul li .bi-search:hover{
+				background: #fff;
+				color: #333;
+				border-radius: 12px;
+}
+.sidebar ul li a{
+      margin-top: 30px;
+				text-decoration: none;
+				color: #fff;
+				display: flex;
+			  align-items: center;
+				transition: all 0.4s ease;
+				font-family: "Ubuntu";
+}
+.sidebar ul li a:hover{
+				color: #11101d;
+				background: #fff;
+				border-radius: 12px;
+}
+.sidebar ul li i{
+				height: 50px;
+				min-width: 50px;
+				line-height: 50px;
+				border-radius: 12px;
+				font-size: 20px;
+				text-align: center;
+}
+.sidebar ul li .list_name{
+				font-size: 15px;
+				opacity: 0;
+				transition: all 0.5s ease;
+}
+.sidebar.active ul li .list_name{
+				opacity: 1;
+}
+.sidebar .copyright{
+				color: #fff;
+				position: absolute;
+				top: 95%;
+				font-size: 10px;
+				font-weight: 700;
+				text-align: center;
+				width: 100%;
+				height: 50px;
+				transform: translateX(-7%);
+				opacity: 0;
+				transition: all 0.5s ease;
+				font-family: "Murecho";
+}
+.sidebar.active .copyright{
+				opacity: 1;
+}
+
+/* Icon */
+.box-card #icon{
+				font-size: 25px;
+				right: 0;
+				background-size: contain;
+				border-radius: 50px;
+				padding: 5px;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50px;
+				height: 50px;
+				transition: all 0.5s ease;
+				position: absolute;
+				transform: translateX(-70px) translateY(10px);
+				background: #0066ff;
+				color: #fff;
+}
+.box-card #icon:hover{
+				background: white;
+				color: #11101d;
+}
+.content{
+       position: absolute;
+				height: 100%;
+				width: calc(100% - 78px);
+				left: 78px;
+				padding: 15px;
+				transition: all 0.5s ease;
+				background: transparent;
+}
+.content .text{
+				padding: 25px;
+				background: #0066ff;
+				line-height: 25px;
+				width: 100%;
+					box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+					margin-bottom: 50px;
+					border-radius: 10px;
+}
+.content .text h3{
+				color: #fff;
+				font-size: 18px;
+				font-family: "Murecho";
+				font-weight: 700;
+				margin-bottom: 15px;
+}
+.content .text span{
+				color: #fff;
+				font-size: 15px;
+				font-family: "Ubuntu";
+				font-weight: 500;
+}
+
+.header{
+			 padding: 10px;
+				width: 90%;
+			 background: transparent; 
+				grid-row-gap: 55px 28px;
+				margin-bottom: 40px;
+}
+.header h3{
+				font-family: "Murecho";
+				font-size: 25px;
+				text-align: center;
+				font-weight: 800;
+}
+.header .box-card{
+	 			width: 90%;
+				height: 450px;
+				background: #fff;
+				color: #11101d;
+				line-height: 35px;
+				margin-top: 30px;
+				padding: 10px;
+				border-radius: 15px;
+				box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+.header .box-card img{
+				width: 100%;
+				height: 200px;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				margin-bottom: 20px;
+				
+}
+.box-card .box-card-title{
+				width: 100%;
+				height: 150px;
+				display: grid;
+				line-height: 30px;
+}
+.box-card .box-card-title span{
+				font-size: 14px;
+				color: #11101d;
+				font-weight: 500;
+				font-family: "Ubuntu";
+}
+.box-card .box-card-title .harga{
+				font-size: 18px;
+				color: #11101d;
+				font-weight: 500;
+				font-family: "Murecho";
+				margin-top: 25px;
+}
+.box-card .box-card-title .title-item{
+				font-size: 20px;
+				color: #11101d;
+				font-weight: 600;
+				position: absolute;
+				transform: translateY(210px) translateX(70px);
+				left: 0;
+				margin-bottom: 10px;
+				font-family: "Murecho";
+}
+.box-card .box-card-title .order{
+				width: 150px;
+				height: 40px;
+				background: #0066ff;
+				outline: none;
+				border: none;
+				border-radius: 50px;
+				margin-top: 10px;
+				color: #fff;
+				font-family: "Murecho";
+				font-size: 15px;
+				font-weight: 700;
+				text-align: center;
+				transition: all 0.5s ease;
+}
+.box-card .box-card-title .order:hover{
+				background: #fff;
+				color: #11101d;
+				box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+
+/* Menu Profil Style */

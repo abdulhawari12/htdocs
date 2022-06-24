@@ -1,0 +1,153 @@
+@font-face 
+{
+  src: url('fonts/montserrat/Montserrat-Bold.ttf');
+  font-family: 'montserrat';
+}
+@font-face 
+{
+  src: url('fonts/Lato/Lato-Bold.ttf');
+  font-family: 'lato-bold';
+}
+@font-face 
+{
+  src: url('fonts/Lato/Lato-Regular.ttf');
+  font-family: 'lato-regular';
+}
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+:root
+{
+  --color-blue: #0099ff;
+  --color-red: rgb(239,99,81);
+  --color-red-alpha0: rgba(239,99,81,0.9);
+  --color-red-alpha1: #F38375;
+  --color-red-alpha2: #F7A399;
+  --color-red-alpha3: #FBC3BC;
+  --color-red-alpha4: #FFE3E0;
+}
+.header
+{
+  width: 100%;
+  background: var(--color-red);
+  height: 100vh;
+}
+.banner-img
+{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.banner-img img 
+{
+  width: 100%;
+  height: 300px;
+}
+.title
+{
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h3 
+{
+  color: white;
+  font-size: 18px;
+  font-family: montserrat;
+}
+.buttonLeft
+{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--color-red-alpha2);
+  margin: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonLeft img 
+{
+  width: 30px;
+  height: 30px;
+}
+.detail
+{
+  width: 100%;
+  height: 730px;
+  position: absolute;
+  transform: translateY(-70px);
+  background: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 50px;
+  padding: 30px;
+}
+.detail .tipe
+{
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  font-family: montserrat;
+  color: white;
+  background: var(--color-red);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.detail .text
+{
+  font-size: 16px;
+  font-family: lato-bold;
+}
+.buttonBuy
+{
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonBuy button
+{
+  width: 70%;
+  height: 50px;
+  font-size: 16px;
+  font-family: montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-red);
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  color: white;
+}
+.box-text
+{
+  background: transparent;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.box-text h3 
+{
+  font-size: 17px;
+  font-family: montserrat;
+  margin: 20px;
+}

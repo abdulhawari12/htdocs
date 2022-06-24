@@ -1,0 +1,128 @@
+@media(max-width: 480px){ 
+body{
+  margin:0;
+  padding: 0;
+  background: white;
+}
+#main{
+  background: #01579B;
+  padding: 10px;
+}
+#main span{
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  float: left;
+}
+#main #profil{
+  width: 30px;
+  position: relative;
+  bottom: 7px;
+  height: 30px;
+}
+#main #link_profil{
+  padding: 3px;
+  background: none;
+}
+#main ul li{
+  display: inline-block;
+ margin-left: 20px;
+ margin-top: 20px;
+ 
+}
+#main a{
+  color: white;
+  text-decoration: none;
+  float: right;
+  font-size: 13px;
+   padding: 7px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+#main a:hover{
+  background: #546E7A;
+  
+}
+#home{
+  background:  linear-gradient(130deg,#C62828,#E53935);
+}
+#about{
+  background: linear-gradient(130deg,#4CAF50,#43A047);
+}
+#contact{
+  background: linear-gradient(200deg,#5C6BC0,#3F51B5);
+}
+#content marquee{
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 330px;
+  padding: 10px;
+  background: #01579B;
+  margin-top: 20px;
+}
+#content ul{
+  background: #F5F5F5;
+  margin: 15px;
+  padding: 10px;
+  padding-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px black;
+}
+#content ul a li{
+  padding: 15px;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+#link1{
+  background: #006dc1;
+}
+#link2{
+  background:  #00C853;
+}
+#link3{
+  background: linear-gradient(90deg,#EF5350,#E57373);
+}
+#link4{
+  background: linear-gradient(90deg,#009688,#26A69A);
+}
+#content ul a li:hover{
+  background:  #546E7A;
+  color: white;
+}
+#content ul a{
+  text-decoration: none;
+  color: white;
+  width: 280px;
+  
+}
+
+#footer{
+  background: black;
+  padding: 15px;
+  margin-top: 30px;
+}
+#footer ul a{
+  text-decoration: none;
+  color: white;
+}
+#footer ul a li{
+  display: inline-block;
+  position: relative;
+  right: 20px;
+  background: #006dc1;
+  padding: 10px;
+  padding-bottom: 10px;
+clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+margin-left: 15px;
+  font-size: 13px;
+}
+#footer h5{
+  color: white;
+  text-align: center;
+ }
+}

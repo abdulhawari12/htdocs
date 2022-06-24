@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@700&family=Oswald:wght@700&family=Ubuntu:wght@500&display=swap');
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.jumbotron{
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background: #fff;
+  box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+.jumbotron .header-jumbotron{
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  background: #fff;
+  box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 1px 5px 0px;
+  border-radius: 20px;
+  justify-content: center;
+}
+.jumbotron .header-jumbotron .profile{
+ height: 80px;
+ width: 80px;
+ border-radius: 50px;
+ box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+.header-jumbotron h4{
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-family: "Murecho";
+}
+
+.box-wallet{
+  width: 350px;
+  height: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  background-image: url('../img/credit-card.png');
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Ubuntu";
+  box-shadow: rgba(14, 30, 37, 0.10) 0px 2px 4px 0px, rgba(14, 30, 37, 0.15) 0px 2px 12px 0px;
+}
+.box-wallet .tb{
+  position: relative;
+  bottom: 0;
+  transform: translateY(110px);
+}
+.box-wallet .balance{
+  font-size: 35px;
+  position: absolute;
+  color: #fff;
+  letter-spacing: 3px;
+  top: 40%;
+  transform: translateY(-15px);
+}
+.box-wallet h3{
+  color: #fff;
+  font-size: 25px;
+  font-family: "Murecho";
+}

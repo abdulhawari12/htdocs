@@ -1,0 +1,12 @@
+body
+{
+  -webkit-tap-highlight-color: transparent;
+}
+a 
+{
+  text-decoration: none;
+}
+ol,li,ul
+{
+  list-style: none;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>TopUp Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#0099ff"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all" />
+  </head>
+<body>
+  <nav class="navigation">
+    <div class="nav-title">
+      Unipin
+    </div>
+    <div class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  <div class="menu-items">
+      <ul>
+        <li class="items klik">
+          <a href="#">
+         <i class="fa fa-home"></i>
+            <span>home</span>
+          </a>
+        </li>
+        <li class="items">
+          <a href="#">
+            <i class="fa fa-diamond"></i>
+            <span>Top Up</span>
+          </a>
+        </li>
+        <li class="items">
+          <a href="#">
+            <i class="fa fa-question"></i>
+            <span>About Us</span>
+          </a>
+        </li>
+        <li class="items">
+          <a href="#">
+            <i class="fa fa-send"></i>
+            <span>Contact Us</span>
+          </a>
+        </li>
+        <li class="items">
+          <a href="#">
+            <i class="fa fa-sign-in"></i>
+            <i class="fa fa-sign-in"></i>
+            <span>Login</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="banner">
+    <a href="#" class="card-slider">
+        <div class="card-image">
+          <img src="assets/banner1.jpg"/>
+        </div>
+        <div class="card-body">
+          <p class="tgl">8 juni 2022</p>
+          <h3 class="card-title">
+            Top Up Diamond epep di Unipin dan dapatkan semua rewards bundle sekarang juga!
+          </h3>
+        </div>
+      </a>
+    <a href="#" class="card-slider">
+        <div class="card-image">
+          <img src="assets/banner1.jpg"/>
+        </div>
+        <div class="card-body">
+          <p class="tgl">8 juni 2022</p>
+          <h3 class="card-title">
+            Top Up Diamond epep di Unipin dan dapatkan semua rewards bundle sekarang juga!
+          </h3>
+        </div>
+      </a>
+    <a href="#" class="card-slider">
+        <div class="card-image">
+          <img src="assets/banner1.jpg"/>
+        </div>
+        <div class="card-body">
+          <p class="tgl">8 juni 2022</p>
+          <h3 class="card-title">
+            Top Up Diamond epep di Unipin dan dapatkan semua rewards bundle sekarang juga!
+          </h3>
+        </div>
+      </a>
+    
+  </section>
+  <section class="header">
+    <p class="header-title">Game Populer</p>
+    <h3 class="trend">Trending Sekarang</h3>
+    <div class="slider" id="slider">
+    </div>
+  </section>
+  <section class="container">
+  <section class="main">
+    <form class="input">
+     <button type="button" id="btnsearch"><i class="fa fa-search"></i></button>
+      <input type="text" name="text" id="search" placeholder=" "/>
+      <label for="search">Cari..</label>
+      <button type="reset" id="reset"><i class="fa fa-close"></i></button>
+    </form>
+  </section>
+     <section class="main-card">
+     </section>
+  </section>
+<script src="js/jquery.js"></script>
+<script>
+const items = document.querySelectorAll(".items")
+  $(".toggle").on('click',function(){
+  document.querySelector('.toggle').classList.toggle('active');
+  document.querySelector('.menu-items').classList.toggle('active');
+});
+function activelinks(){
+  items.forEach((a)=>
+  a.classList.remove('klik'));
+  this.classList.add('klik');
+}
+items.forEach((a)=>
+a.addEventListener('click', activelinks));
+ $.getJSON("data/data.json",function(data){
+    let menu = data.menu;
+    $.each(menu, function(i,data){
+      $("#slider").append(`<div class="card-md">
+        <div class="card-md-img">
+          <img src="assets/`+ data.gambar +`"/>
+        </div>
+          <p>`+ data.nama +`</p>
+          <h4>`+ data.judul +`</h4>
+          <a href="#" class="btn-card">Top up</a>
+      </div>`);
+    });
+  });
+  $.getJSON("data/data2.json", function(a){
+    let b = a.b;
+    $.each(b, function(i,a){
+      $(".main-card").append(`<div class="card">
+      <div class="card-img">
+        <img src="assets/`+ a.gambar +`"/>
+      </div>
+      <p>`+ a.nama +`</p>
+      <h4>`+ a.judul +`</h4>
+      <a href="#" class="btn">Top Up</a>
+    </div>`);
+    });
+  });
+  $('#search').on("keyup",function(){
+    $("#reset").addClass('show');
+  })
+  $('#reset').on('click',function(){
+    $('#reset').removeClass('show');
+  });
+</script>
+</body>
+</html>

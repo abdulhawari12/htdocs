@@ -1,0 +1,278 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body
+{
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+/* modal */
+#modal.active
+{
+  display: flex;
+  opacity: 1;
+}
+#modal{
+  background: rgba(0,0,0,.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 1;
+}
+#modal .modal-body
+{
+  background: white;
+  width: 90%;
+  height: 300px;
+  text-align: center;
+  display: grid;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
+#modal .modal-body h3
+{
+  width: 100%;
+  background: #fff;
+  height: 40px;
+  border-bottom: 2px solid black;
+}
+#modal .modal-body p 
+{
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+}
+#modal .title-modal
+{
+  color: #0099ff;
+  font-size: 14px;
+  font-weight: 700;
+}
+#modal .button
+{
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  height: 80px;
+  position: absolute;
+  top: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#modal .button a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+#modal .button #Batal
+{
+  background: #e43030;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+#modal .button #Iya
+{
+  background: #0099ff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end modal */
+
+/* search */
+form
+{
+  width: 100%;
+  height: 70px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+form input
+{
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  background: transparent;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+  color: #11101d;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+}
+button
+{
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background: #0099ff;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+/* end */
+/* dashboard */
+.main 
+{
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  background: red;
+  width: 100%;
+  height: 100vh;
+}
+.main h1
+{
+  text-align: center;
+  margin-bottom: 40px;
+  color: black;
+}
+.btn-logout
+{
+  background: #0099ff;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.btn-tmb
+{
+  background: #0099ff;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.table
+{
+  width: 90%;
+  height: 480px;
+  padding: 10px;
+  padding-top: 40px;
+  background: transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+.table-body
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+.table-body .th
+{
+  background: #0099ff;
+  color: white;
+  font-size: 15px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.table-body .td
+{
+  background: #0099ff;
+  color: white;
+  font-size: 13px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+.bdr1
+{
+  border-top-left-radius: 10px;
+}
+.bdr2
+{
+  border-top-right-radius: 10px;
+}
+.bdr3
+{
+  border-bottom-left-radius: 10px;
+}
+.bdr4
+{
+  border-bottom-right-radius: 10px;
+}
+.btn-delete
+{
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  background: red;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+.btn-delete img
+{
+  width: 20px;
+  height: 20px;
+}
+.btn-edit
+{
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  background: #04c4f4;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+.btn-edit img
+{
+  width: 20px;
+  height: 20px;
+}

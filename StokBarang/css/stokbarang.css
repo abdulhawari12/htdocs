@@ -1,0 +1,444 @@
+@font-face
+{
+  src: url('../fonts/bebasneue.ttf');
+  font-family: 'bebasneue';
+}
+@font-face
+{
+  src: url('../fonts/evogria.otf') format('otf');
+  font-family: 'evogria';
+}
+*,html,body
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+:root
+{
+  --color-primary: #0099ff;
+  --color-secondary: #0055ff;
+  --color-white: #ffffff;
+  --color-black: #11101d;
+}
+body 
+{
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+.navigation
+{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--color-primary);
+}
+.navigation h3 
+{
+  color: white;
+  font-size: 18px;
+  font-family: evogria;
+}
+.toggle
+  {
+    display: none;
+  }
+  .navigation h3 
+  {
+    font-size: 20px;
+  }
+  .menuitems
+  {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+  }
+  .menuitems ul 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menuitems ul li 
+  {
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .menuitems ul li.actived 
+  {
+    border-bottom: 3px solid var(--color-white);
+  }
+  .menuitems ul li a 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-family: evogria;
+    text-decoration: none;
+  }
+  form 
+  {
+    width: 90%;
+    margin: auto;
+    padding: 50px 20px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+  form h3 
+  {
+    font-size: 25px;
+    color: var(--color-primary);
+    font-family: evogria;
+    top: 20px;
+    position: absolute;
+  }
+  form .input 
+  {
+    width: 250px;
+    height: 50px;
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .input input 
+  {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: white;
+    padding: 0px 20px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+    font-family: evogria;
+  }
+  .input label 
+  {
+    position: absolute;
+    transform: translateX(20px);
+    font-size: 18px;
+    font-family: evogria;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.3s;
+  }
+  button
+  {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: evogria;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  #kode:focus ~ label,
+#kode:not(:placeholder-shown)#kode:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#kd_satuan:focus ~ label,
+#kd_satuan:not(:placeholder-shown)#kd_satuan:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#satuan:focus ~ label,
+#satuan:not(:placeholder-shown)#satuan:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#hBeli:focus ~ label,
+#hBeli:not(:placeholder-shown)#hBeli:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#hJual:focus ~ label,
+#hJual:not(:placeholder-shown)#hJual:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#quantity:focus ~ label,
+#quantity:not(:placeholder-shown)#quantity:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#nBarang:focus ~ label,
+#nBarang:not(:placeholder-shown)#nBarang:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#diskon:focus ~ label,
+#diskon:not(:placeholder-shown)#diskon:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+@media only screen and (max-width: 600px){
+.toggle 
+{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.toggle span 
+{
+  width: 15px;
+  height: 5px;
+  background: var(--color-white);
+  position: absolute;
+  border-radius: 100px;
+  transition: all 0.3s;
+  left: 0;
+}
+.toggle span:nth-child(1)
+{
+  width: 30px;
+  transform: translateY(-10px);
+  left: 0;
+}
+.toggle span:nth-child(2)
+{
+  width: 20px;
+  transform: translateY(10px);
+  left: 0;
+}
+.toggle.active span:nth-child(1)
+{
+  transform: translateY(0px) rotate(45deg);
+  width: 30px;
+}
+.toggle.active span:nth-child(2)
+{
+  transform: translateY(0px) rotate(-220deg);
+  width: 30px;
+}
+.toggle.active span:nth-child(3)
+{
+  transform: translateX(-500px);
+}
+.menuitems.active
+{
+  left: 0;
+}
+.menuitems 
+{
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: -600px;
+  background: var(--color-primary);
+  transition: all 0.3s;
+  z-index: 1000;
+  display: block;
+}
+.menuitems ul 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menuitems ul li 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+.menuitems ul li.actived
+{
+  border-bottom: 3px solid var(--color-white);
+}
+.menuitems ul li a 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 16px;
+  font-family: evogria;
+  text-decoration: none;
+}
+form 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+form h3 
+{
+  font-size: 18px;
+  font-family: evogria;
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 20px;
+  transform: translateY(0px);
+  position: relative;
+}
+.input 
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  position: relative;
+}
+.input input 
+{
+  width: 100%;
+  height: 100%;
+  background: white;
+  outline: none;
+  border: none;
+  padding: 0px 20px;
+  border-radius: 10px;
+}
+.input label 
+{
+  position: absolute;
+  left: 0;
+  transform: translateX(20px);
+  font-size: 16px;
+  color: rgba(0,0,0,0.5);
+  font-family: evogria;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+#kode:focus ~ label,
+#kode:not(:placeholder-shown)#kode:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#kd_satuan:focus ~ label,
+#kd_satuan:not(:placeholder-shown)#kd_satuan:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#satuan:focus ~ label,
+#satuan:not(:placeholder-shown)#satuan:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#hBeli:focus ~ label,
+#hBeli:not(:placeholder-shown)#hBeli:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#hJual:focus ~ label,
+#hJual:not(:placeholder-shown)#hJual:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#quantity:focus ~ label,
+#quantity:not(:placeholder-shown)#quantity:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#nBarang:focus ~ label,
+#nBarang:not(:placeholder-shown)#nBarang:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+#diskon:focus ~ label,
+#diskon:not(:placeholder-shown)#diskon:not(:focus) ~ label
+{
+  transform: translateY(-40px) translateX(20px);
+  font-size: 14px;
+  color: var(--color-primary);
+}
+button 
+{
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-family: evogria;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  background: var(--color-primary);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+}

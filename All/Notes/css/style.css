@@ -1,0 +1,460 @@
+@font-face 
+{
+  src: url('fonts/montserrat/Montserrat-Bold.ttf');
+  font-family: 'montserrat';
+}
+@font-face 
+{
+  src: url('fonts/Lato/Lato-Bold.ttf');
+  font-family: 'lato-bold';
+}
+@font-face 
+{
+  src: url('fonts/Lato/Lato-Regular.ttf');
+  font-family: 'lato-regular';
+}
+:root
+{
+  --color-white: #fff;
+  --color-alpha: rgba(0,0,0,0.8);
+  --color-primary: #3E92CC;
+  --color-secondary: #2A628F;
+  --color-primaryDark: #16324F;
+  --color-SecondaryDark: #13293D;
+  --color-SecondaryDark2: #18435A;
+}
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  width: 100%;
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-primaryDark);
+}
+a 
+{
+  text-decoration: none;
+}
+.navigation
+{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: var(--color-primary);
+}
+.navigation h3 
+{
+  color: white;
+  font-family: montserrat;
+  font-size: 20px;
+}
+.navigation .setting-up 
+{
+  width: 100px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.navigation .setting-up .edit
+{
+  font-size: 18px;
+  font-family: lato-bold;
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  margin-left: 20px;
+}
+.navigation .setting-up img 
+{
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+/* slider-content */
+.slider-content 
+{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background: var(--color-primary);
+  left: 0;
+  top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slider-content .slider-content-card
+{
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2px);
+  transition: all 0.2s ease-in-out;
+}
+.slider-content-card.aktif
+{
+  border-bottom: 2px solid white;
+  transform: scale(5px);
+}
+.slider-content .slider-content-card h3 
+{
+  font-size: 16px;
+  font-family: montserrat;
+  color: white;
+}
+/* slider-content end */
+
+/* Searching */
+.searching 
+{
+ width: 100%;
+ height: 100px;
+ position: fixed;
+ background: var(--color-primary);
+ top: 120px;
+ left: 0;
+ padding: 10px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ z-index: 100;
+}
+.searching .search 
+{
+  width: 300px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 15px;
+  margin-right: 10px;
+  font-family: montserrat;
+  color: var(--color-white);
+  background: var(--color-secondary);
+}
+.searching .title-search
+{
+  font-size: 15px;
+  font-family: montserrat;
+  position: absolute;
+  transform: translateX(-120px) translateY(0px);
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+.search:focus ~ .title-search,
+.search:not(:placeholder-shown).search:not(:focus) ~ .title-search
+{
+  font-size: 10px;
+  transform: translateX(-130px) translateY(-20px);
+}
+
+.searching button:hover
+{
+  background: var(--color-secondary);
+}
+.searching button
+{
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.searching button img 
+{
+  width: 40px;
+  height: 40px;
+}
+/* Searching end */
+
+/* main content */
+
+/* edit show */
+.checkbox.show1
+{
+  margin-right: 40px;
+  opacity: 1!important;
+}
+/* end */
+
+.main-content
+{
+  background: var(--color-primaryDark);
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+.main-content .card-content
+{
+  background: transparent;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.main-content .card-content .card-content-text
+{
+  width: 75%;
+  height: 60px;
+  position: relative;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  left: -30px;
+  z-index: 70;
+}
+.card-content .card-content-text .text
+{
+  font-size: 16px;
+  font-family: montserrat; 
+  color: var(--color-white);
+  transform: translateY(30px);
+  margin: 10px;
+}
+.card-content .card-content-text p 
+{
+  color: whitesmoke;
+  font-size: 13px;
+  font-family: montserrat;
+  margin: 10px;
+}
+.main-content .card-content .checkbox:checked::before
+{
+  content: '✓';
+  background: var(--color-secondary);
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.main-content .card-content .checkbox
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  margin-left: 20px;
+  transition: all 0.3s ease-in-out;
+}
+/* main content end */
+/* navigation bottom */
+.navigation-bottom
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  z-index: 100;
+  background: var(--color-primary);
+}
+.navigation-bottom .btn-card
+{
+  width: 200px;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.navigation-bottom  a 
+{
+  text-decoration: none;
+}
+.navigation-bottom .btn-card:hover
+{
+  background: var(--color-primaryDark);
+}
+.navigation-bottom .btn-card img
+{
+  width: 30px;
+  height: 30px;
+}
+.navigation-bottom .btn-card h3 
+{
+  color: white;
+  font-size: 14px;
+  font-family: lato-bold;
+  margin-top: 10px;
+}
+/* navigation bottom end */
+
+/* popup box small */
+.popup-box-sm.active
+{
+  display: block;
+  z-index: 100;
+  top: 0;
+}
+.popup-box-sm
+{
+  background: var(--color-alpha);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.popup-box-sm .btnClose
+{
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: transparent;
+}
+.popup-box-sm .btnClose img 
+{
+  width: 35px;
+  height: 35px;
+}
+.popup-box-sm .items-popup-box-sm
+{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background: var(--color-white);
+  bottom: 0;
+}
+.popup-box-sm .items-popup-box-sm ul li
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border-bottom: 0.5px solid var(--color-alpha);
+  transform: translateX(-20px);
+}
+.popup-box-sm .items-popup-box-sm ul li:hover a
+{
+  color: var(--color-white);
+}
+.popup-box-sm .items-popup-box-sm ul li a 
+{
+  font-family: montserrat;
+  font-size: 15px;
+  color: #11101d;
+  text-decoration: none;
+}
+.popup-box-sm .items-popup-box-sm ul li:hover
+{
+  background: var(--color-primaryDark);
+}
+/* popup box small  end*/
+
+/* popup edit */
+.popup-edit-box.showEdit
+{
+  display: flex;
+  z-index: 1000;
+}
+.popup-edit-box
+{
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  background: rgba(0,0,0,0.0.04);
+  z-index: 0;
+  top: 0;
+  display: none;
+  left: 0;
+}
+.edit-box 
+{
+  width: 100%;
+  height: 60px;
+  background: var(--color-primary);
+  display: flex;
+}
+.popup-edit-box #semua
+{
+  appearance: none;
+}
+.popup-edit-box label
+{
+  font-size: 15px;
+  font-family: montserrat;
+  color: white;
+  background: transparent;
+  width: 100px;
+  height: 40px;
+  border: none;
+  position: relative;
+  transform: translateX(-5px) translateY(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-edit-box button 
+{
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border:none;
+  background: transparent;
+  font-size: 15px;
+  font-family: montserrat;
+  margin-top: 10px;
+  color: white;
+}
+.popup-edit-box h3 
+{
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: montserrat;
+  color: white;
+}
+/* popup edit  end*/

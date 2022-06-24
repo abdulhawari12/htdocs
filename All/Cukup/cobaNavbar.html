@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				<title>Page title</title>
+				<style>
+				body{
+				}
+				.nav.active{
+				  height: 380px;
+				  z-index: 1000000;
+				}
+				.nav.active ul{
+				  opacity: 1;
+				}
+				.nav.active ul li{
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  opacity: 1;
+				}
+				.nav.active ul li a{
+				  opacity: 1;
+				}
+						.nav{
+						box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+						width: 90%;
+						height: 70px;
+						border-radius: 20px;
+						padding: 10px;
+						top: 0;
+						left: 0;
+						transition: all 0.3s ease-in-out;
+						position: fixed;
+						z-index: 1;
+						}
+						.nav-body{
+						  background: none;
+						  color: #0099ff;
+						  padding: 10px;
+						  width: 95%;
+						  height: 50px;
+						  justify-content: space-between;
+						  display: flex;
+						  align-items: center;
+						  margin-bottom: 5px;
+						}
+						.toggleBtn{
+				width: 40px;
+				height: 50px;
+				background: transparent;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				position: relative;
+				justify-content: center;
+}
+.toggleBtn span{
+			background: #11101d;
+			width: 35px;
+			height: 5px;
+			position: absolute;
+			border-radius: 50px;
+			transition: all 0.5s ease;
+}
+.toggleBtn span:nth-child(1){
+			transform: translateY(-10px);
+			width: 25px;
+			left: 3px;
+			background: #D9006A;
+}
+.toggleBtn span:nth-child(2){
+				transform: translateY(10px);
+				width: 15px;
+				left: 4px;
+				background: #0099ff;
+}
+.toggleBtn.actived span:nth-child(1){
+			transform: translateY(0px) rotate(45deg);
+			width: 35px;
+}
+.toggleBtn.actived span:nth-child(2){
+			transform: translateY(0px) rotate(-45deg);
+			width: 35px;
+}
+.toggleBtn.actived span:nth-child(3){
+				transform: translateX(300px);
+}
+.nav-items ul
+{
+  width: 350px;
+  height: 250px;
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.nav-items ul a:hover{
+  background: #0099ff;
+  color: white;
+}
+.nav-items ul a{
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #11101d;
+  width: 50%;
+  height: 20px;
+  margin-bottom: 10px;
+  background: none;
+  padding: 10px;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.nav-items ul li{
+  list-style: none;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 40px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+/* modal */
+.modal.show{
+  display: flex;
+  z-index: 1000;
+  opacity: 1;
+}
+.modal.show * {
+  display: block;
+  opacity: 1;
+}
+.modal.show .toggle {
+  display: flex;
+  opacity: 1;
+}
+.modal * {
+  display: none;
+  opacity: 0;
+}
+.modal {
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  opacity: 0;
+}
+.modal-body {
+  background: #fff;
+  width: 350px;
+  height: 370px;
+  border-radius: 20px;
+}
+.modal-body h3 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial;
+  text-align: center;
+}
+.modal-title {
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.5);
+  width: 90%;
+  margin: auto;
+  height: 200px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.toggle {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+}
+.toggle .btn_cancel {
+  background: red;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  width: 30%;
+  height: 50px;
+  border-radius: 10px;
+}
+.toggle .btn_oke {
+  width: 30%;
+  height: 50px;
+  background: #0099ff;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+button{
+  width: 30%;
+  height: 50px;
+  background: #0099ff;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+	</style>
+</head>
+<body>
+  <!----- modal ---->
+				<div class="modal">
+				  <div class="modal-body">
+				    <h3>Percobaan</h3>
+				    <div class="modal-title">
+				      <p>Hello World</p>
+				    </div>
+				  <div class="toggle">
+				    <button type="button" class="btn_cancel">Batal</button>
+				    <button type="submit" class="btn_oke">Oke</button>
+				  </div>
+				  </div>
+				</div>
+				<!---- end modal --->
+	<!--<div class="nav">
+	  <div class="nav-body">
+				<h3>Coba</h3>
+				<div class="toggleBtn">
+						<span></span>
+						<span></span>
+						<span></span>
+				</div>
+	  </div>
+			<div class="nav-items">
+				  <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#" id="about">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">My Checkout</a></li>
+				<li><a href="#">My Profile</a></li>
+				<li><a href="#">Settings</a></li>
+					</ul>
+			</div>
+	</div>
+			--->	
+			<button type="button" class="showModal">SHOW</button>	
+			<button type="button" class="showModal2">SHOW</button>	
+			<button type="button" class="showModal3">SHOW</button>	
+			<button type="button" class="showModal4">SHOW</button>	
+		<script>
+		 /* const toggleBtn = document.querySelector('.toggleBtn');
+		  const nav = document.querySelector('.nav');
+		toggleBtn.addEventListener('click', function(){
+		   nav.classList.toggle('active');
+		   toggleBtn.classList.toggle('actived');
+		});*/
+		const showModal = document.querySelector('.showModal');
+		
+		const showModal2 = document.querySelector('.showModal2');
+		
+		const showModal3 = document.querySelector('.showModal3');
+		
+		const showModal4 = document.querySelector('.showModal4');
+		
+		const modal = document.querySelector('.modal');
+		const remove = document.querySelector('.btn_cancel');
+		remove.addEventListener('click', function(){
+		  modal.classList.remove('show');
+		});
+		
+		showModal.addEventListener('click', function(){
+		  modal.classList.toggle('show');
+		});
+		
+		showModal2.addEventListener('click', function(){
+		  modal.classList.toggle('show');
+		});
+		
+		showModal3.addEventListener('click', function(){
+		  modal.classList.toggle('show');
+		});
+		
+		showModal4.addEventListener('click', function(){
+		  modal.classList.toggle('show');
+		});
+		</script>
+</body>
+</html>
